@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bwthlo64pi2gx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n1dj2"]
+height = 20.0
+
+[node name="Ball" type="Area2D" unique_id=192336347]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1410130023]
+shape = SubResource("CapsuleShape2D_n1dj2")
