@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://bwthlo64pi2gx"]
 
+[ext_resource type="Texture2D" uid="uid://bsof4qw6sc0rl" path="res://sprites/Bloco.png" id="1_7s4qf"]
+[ext_resource type="Script" uid="uid://saavt4whigi4" path="res://scenes/ball.gd" id="1_cxlvu"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n1dj2"]
-height = 20.0
+radius = 7.0
+height = 14.0
 
 [node name="Ball" type="Area2D" unique_id=192336347]
+script = ExtResource("1_cxlvu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=420796439]
+texture = ExtResource("1_7s4qf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1410130023]
 shape = SubResource("CapsuleShape2D_n1dj2")

@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://bdy6eolr4pi1t"]
 
+[ext_resource type="Texture2D" uid="uid://qm3oy3jofrc4" path="res://sprites/BlocoPlayer.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://detp2ulrl3o1q" path="res://scenes/player.gd" id="1_g2els"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8vuu"]
+size = Vector2(62, 30)
 
 [node name="Player" type="Area2D" unique_id=963963296]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=709711209]
+texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=374977089]
 shape = SubResource("RectangleShape2D_u8vuu")

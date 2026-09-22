@@ -2,9 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://bwthlo64pi2gx" path="res://scenes/ball.tscn" id="1_00tan"]
 [ext_resource type="PackedScene" uid="uid://bdy6eolr4pi1t" path="res://scenes/player.tscn" id="2_l1v76"]
+[ext_resource type="PackedScene" uid="uid://dsceuwu45rfsn" path="res://bloco.tscn" id="3_l1v76"]
 
 [node name="Gameplay" type="Node2D" unique_id=1055879497]
 
 [node name="Ball" parent="." unique_id=192336347 instance=ExtResource("1_00tan")]
 
 [node name="Player" parent="." unique_id=963963296 instance=ExtResource("2_l1v76")]
+
+[node name="bloco" parent="." unique_id=1714166786 instance=ExtResource("3_l1v76")]
