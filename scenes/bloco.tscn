@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://dsceuwu45rfsn"]
 
 [ext_resource type="Texture2D" uid="uid://byndqme32hri1" path="res://sprites/BlocoPraQuebrar.png" id="1_247xi"]
+[ext_resource type="Script" uid="uid://b5wlsxhtmkudm" path="res://scenes/bloco.gd" id="1_lrfig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ub41w"]
 size = Vector2(30, 30)
 
 [node name="bloco" type="Area2D" unique_id=1714166786]
+scale = Vector2(2.5, 1)
+script = ExtResource("1_lrfig")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1715127181]
 texture = ExtResource("1_247xi")

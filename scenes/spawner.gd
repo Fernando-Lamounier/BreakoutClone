@@ -1,10 +1,19 @@
 extends Node2D
 
-const GRID:int = 32
-@onready var bloco: Area2D = %Bloco
-@onready var todos_blocos: Array[Area2D] = []
+@onready var todos_blocos:PackedScene = preload("res://scenes/bloco.tscn")
 
-# Called when the node enters the scene tree for the first time.
+var ponto_inicial: Vector2 = Vector2(-420,-510)
+
 func _ready() -> void:
+	for i in range(4):
+		for j in range(8):
+			var novo_bloco = todos_blocos.instantiate()
+			novo_bloco.position = ponto_inicial
+			ponto_inicial.x += 100
+			get_parent().add_child(novo_bloco)
+			
+		ponto_inicial.y += 60
+		ponto_inicial.x = -420
+		
 	
 	pass # Replace with function body.

@@ -11,7 +11,6 @@ var nova_direcao = Vector2(0, 0)
 
 
 func _ready() -> void:
-	position = Vector2(0, 0)
 	direcao_atual = Vector2(0.5,0.5)
 	pass
 
@@ -32,8 +31,6 @@ func _process(delta: float) -> void:
 		
 	if position.y >= 540:
 		get_tree().quit()
-	
-	print(direcao_atual)
 
 
 func _on_player_area_entered(area: Area2D) -> void:
@@ -50,5 +47,4 @@ func _on_bloco_area_entered(area: Area2D) -> void:
 	direcao_atual.y = direcao_atual.y * -1 * randf_range(1, 2)
 	direcao_atual.x = direcao_atual.x * randf_range(1, 1.6)
 	direcao_atual = direcao_atual.normalized()
-	
 	pass # Replace with function body.
