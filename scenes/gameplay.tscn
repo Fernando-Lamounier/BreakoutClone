@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bwthlo64pi2gx" path="res://scenes/ball.tscn" id="1_00tan"]
 [ext_resource type="PackedScene" uid="uid://bdy6eolr4pi1t" path="res://scenes/player.tscn" id="2_l1v76"]
 [ext_resource type="PackedScene" uid="uid://dsceuwu45rfsn" path="res://bloco.tscn" id="3_l1v76"]
+[ext_resource type="Script" uid="uid://c1vcvn6w53tx6" path="res://bloco.gd" id="4_ct7aa"]
 
 [node name="Gameplay" type="Node2D" unique_id=1055879497]
 
@@ -14,6 +15,9 @@ position = Vector2(0, 500)
 
 [node name="Bloco" parent="." unique_id=1714166786 instance=ExtResource("3_l1v76")]
 position = Vector2(555, 429)
+script = ExtResource("4_ct7aa")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=965145855]
 unique_name_in_owner = true
+
+[connection signal="area_entered" from="Player" to="Ball" method="_on_player_area_entered"]
