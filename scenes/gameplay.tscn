@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bwthlo64pi2gx" path="res://scenes/ball.tscn" id="1_00tan"]
 [ext_resource type="PackedScene" uid="uid://bdy6eolr4pi1t" path="res://scenes/player.tscn" id="2_l1v76"]
-[ext_resource type="PackedScene" uid="uid://dsceuwu45rfsn" path="res://scenes/bloco.tscn" id="3_l1v76"]
 [ext_resource type="Script" uid="uid://dowbow63cd8di" path="res://scenes/spawner.gd" id="5_ocj2s"]
 
 [node name="Gameplay" type="Node2D" unique_id=1055879497]
@@ -12,16 +11,10 @@
 [node name="Player" parent="." unique_id=963963296 instance=ExtResource("2_l1v76")]
 position = Vector2(0, 500)
 
-[node name="Bloco" parent="." unique_id=1714166786 groups=["blocos"] instance=ExtResource("3_l1v76")]
-position = Vector2(213, -428)
-
 [node name="Spawner" type="Node2D" parent="." unique_id=320836777]
 script = ExtResource("5_ocj2s")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=965145855]
 unique_name_in_owner = true
 
-[connection signal="area_entered" from="Ball" to="Bloco" method="_on_ball_area_entered"]
-[connection signal="area_entered" from="Player" to="Ball" method="_on_player_area_entered"]
-[connection signal="area_entered" from="Bloco" to="Ball" method="_on_bloco_area_entered"]
-[connection signal="area_entered" from="Bloco" to="Bloco" method="_on_area_entered"]
+[connection signal="area_entered" from="Ball" to="Ball" method="_on_area_entered"]

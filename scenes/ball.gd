@@ -33,16 +33,7 @@ func _process(delta: float) -> void:
 		get_tree().quit()
 
 
-func _on_player_area_entered(area: Area2D) -> void:
-	direcao_anterior = direcao_atual
-	direcao_atual.y = direcao_atual.y * -1 * randf_range(1, 2)
-	direcao_atual.x = direcao_atual.x * randf_range(1, 1.6)
-	direcao_atual = direcao_atual.normalized()
-	
-	pass # Replace with function body.
-
-
-func _on_bloco_area_entered(area: Area2D) -> void:
+func _on_area_entered(area: Area2D) -> void:
 	direcao_anterior = direcao_atual
 	direcao_atual.y = direcao_atual.y * -1 * randf_range(1, 2)
 	direcao_atual.x = direcao_atual.x * randf_range(1, 1.6)

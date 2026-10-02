@@ -10,7 +10,7 @@ func _ready() -> void:
 			var novo_bloco = todos_blocos.instantiate()
 			novo_bloco.position = ponto_inicial
 			ponto_inicial.x += 100
-			get_parent().add_child(novo_bloco)
+			add_child(novo_bloco)
 			
 		ponto_inicial.y += 60
 		ponto_inicial.x = -420
